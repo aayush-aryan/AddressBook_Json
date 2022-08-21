@@ -22,7 +22,8 @@ namespace AddressBookSystem
                 Console.WriteLine("7.Enter name of the address book you want to  record in sorting order");
                 Console.WriteLine("8.To ordered the record by city or state or zip Please enter book name");
                 Console.WriteLine("9.To Read Data from file");
-                Console.WriteLine("10.To Append Data into file");  
+                Console.WriteLine("10.To Append Data into file");
+                Console.WriteLine("11.To Read Data from CSV file");
                 Console.WriteLine("4.close");
                 choice = Convert.ToInt32(Console.ReadLine());
 
@@ -76,6 +77,9 @@ namespace AddressBookSystem
                         break;
                     case 10:
                         FileOperation.WriteUsingStreamWriter();
+                        break;
+                    case 11:
+                        FileOperation.ReadFromCSVReader();
                         break;
 
                     default:
