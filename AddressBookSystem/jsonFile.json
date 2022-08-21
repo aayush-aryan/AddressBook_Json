@@ -1,0 +1,30 @@
+﻿{
+  "first_name": "Aayush",
+  "last_name": "singh",
+  "address": "noida",
+  "city": "noida",
+  "state": "UP",
+  "zip": "800020",
+  "phone_number": "01234567890",
+  "email": "aayush@gmail.com"
+}
+{
+  "first_name": "Ram",
+  "last_name": "singh",
+  "address": "grugram",
+  "city": "grugram",
+  "state": "Hrayana",
+  "zip": "800030",
+  "phone_number": "01234567890",
+  "email": "ram@gmail.com"
+}
+{
+  "first_name": "aryan",
+  "last_name": "singh",
+  "address": "patna",
+  "city": "patna",
+  "state": "bihar",
+  "zip": "800040",
+  "phone_number": "01234567800",
+  "email": "aryan@gmail.com"
+}{"first_name":"aa","last_name":"aa","address":"aa","city":"aa","state":"aa","zip":"aa","phone_number":"aa","email":"aa"}

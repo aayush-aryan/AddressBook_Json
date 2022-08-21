@@ -1,4 +1,5 @@
 ﻿using CsvHelper;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -107,6 +108,45 @@ namespace AddressBookSystem
                         csvExport.WriteRecords(records);
                     }
                 }
+
+            }
+        }
+
+        static string jsonFilePath = "F:\\bridgelabz_practice\\AddressBook_Json\\AddressBookSystem\\jsonFile.json";
+        public static void ReadFromJSONFile()
+        {
+            var jsonData = File.ReadAllText(jsonFilePath);
+            Console.WriteLine(jsonData);
+        }
+        public static void WriteIntoJSONFile()
+        {
+            Contact person = new Contact();
+            Console.WriteLine("Enter All Details Like: ");
+            Console.WriteLine("Enter First_Name: ");
+            person.first_name = Console.ReadLine();
+            Console.WriteLine("Enter Last Name:");
+            person.last_name = Console.ReadLine();
+            Console.WriteLine("Enter Addree :");
+            person.address = Console.ReadLine();
+            Console.WriteLine("Enter City Name:");
+            person.city = Console.ReadLine();
+            Console.WriteLine("Enter State Name:");
+            person.state = Console.ReadLine();
+            Console.WriteLine("Enter pin Number:");
+            person.zip = Console.ReadLine();
+            Console.WriteLine("Enter Phone Number:");
+            person.phone_number = Console.ReadLine();
+            Console.WriteLine("Enter Email:");
+            person.email = Console.ReadLine();
+
+            var jsonData = JsonConvert.SerializeObject(person);
+            if (File.Exists(jsonFilePath))
+            {
+                File.AppendAllText(jsonFilePath, jsonData + Environment.NewLine);
+            }
+            else
+            {
+                Console.WriteLine("File doesn't exists");
             }
         }
     }
